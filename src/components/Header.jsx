@@ -13,6 +13,12 @@ function Header() {
   const { state } = useContext(cartContext);
   const [open, setOpen] = useState(false);
 
+  const socialLinks = [
+    { Icon: FaFacebookF, link: "https://www.facebook.com/" },
+    { Icon: BsInstagram, link: "https://www.instagram.com/" },
+    { Icon: FaTiktok, link: "https://www.tiktok.com/" },
+  ];
+
   const totalItem = state?.reduce((acc, item) => acc + item.qty, 0);
 
   return (
@@ -48,8 +54,19 @@ function Header() {
           <div className="hidden md:flex items-center gap-4">
 
             {/* SOCIAL ICONS */}
-            {[FaFacebookF, BsInstagram, FaTiktok].map((Icon, i) => (
-              <a key={i} href="#" className="w-7 h-7 flex items-center justify-center bg-gray-400 text-white rounded-full hover:bg-orange-500">
+            {/* {[FaFacebookF, BsInstagram, FaTiktok].map((Icon, i) => (
+              <a key={i} href="https://www.facebook.com/" className="w-7 h-7 flex items-center justify-center bg-gray-400 text-white rounded-full hover:bg-orange-500">
+                <Icon size={14} />
+              </a>
+            ))} */}
+            {socialLinks.map(({ Icon, link }, i) => (
+              <a
+                key={i}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-7 h-7 flex items-center justify-center bg-gray-400 text-white rounded-full hover:bg-orange-500 transition"
+              >
                 <Icon size={14} />
               </a>
             ))}
