@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Nova+Flat&display=swap');
+@import "tailwindcss";
+@theme{
+
+  --font-Allura: "Allura", cursive;
+  --font-Nova: "Nova Flat", system-ui;;
+}
+/*   font-family: "Momo Signature", cursive; */
+/*  font-family: "Allura", cursive; */
