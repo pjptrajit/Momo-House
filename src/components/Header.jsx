@@ -95,7 +95,7 @@ function Header() {
                   {!isAuthenticated && <NavLink to="/login">Login</NavLink>}
                   {/* {!isAuthenticated && <NavLink to="/register">Register</NavLink>} */}
                   {isAuthenticated && (
-                    <button onClick={() => logout()}>Logout</button>
+                    <button onClick={() =>{ logout();navigate("/")}}>Logout</button>
                   )}
                 </div>
               </div>
