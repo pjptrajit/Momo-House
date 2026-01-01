@@ -79,7 +79,7 @@ function Header() {
             </button>
 
             {/* PROFILE */}
-            <div className="relative group">
+            <div className="relative group" >
               <img
                 src={
                   isAuthenticated
@@ -95,7 +95,8 @@ function Header() {
                   {!isAuthenticated && <NavLink to="/login">Login</NavLink>}
                   {/* {!isAuthenticated && <NavLink to="/register">Register</NavLink>} */}
                   {isAuthenticated && (
-                    <button onClick={() =>{ logout();navigate("/")}}>Logout</button>
+                    <button onClick={() =>{ logout();
+                      navigate('/')}}>Logout</button>
                   )}
                 </div>
               </div>
@@ -121,7 +122,9 @@ function Header() {
               <NavLink onClick={() => setOpen(false)} to="/profile">Profile</NavLink>
               {!isAuthenticated && <NavLink to="/login">Login</NavLink>}
               {isAuthenticated && (
-                <button onClick={() => logout()}>Logout</button>
+                <button onClick={() => {logout();
+                  navigate('/');}
+                }>Logout</button>
               )}
             </div>
           </div>
